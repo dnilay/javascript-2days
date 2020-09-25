@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title></title>
+</head>
+<body>
+	<h3>(Open JavaScript console by pressing F12 key!) Shows that a
+		JavaScript object is a Hash.</h3>
+	<script type="text/javascript">
+		// Declare a function
+		function functionDefinedSomewhere(something) {
+			console.log(something)
+		}
+
+		// Create a JavaScript object 
+		var myPerson = {
+			firstname : "John",
+			lastname : "Doe",
+			age : 50,
+			tellYourage : function() { // Anonymous function without argument
+				console.log("The age is " + this.age);
+			},
+			tellSomething : function(something) { // Anonymous function with an argument
+				console.log(something);
+			},
+			tellWhatever : functionDefinedSomewhere // Named function		
+		}
+
+		// Display the "myPerson" object
+		console.dir(myPerson);
+
+		// Call methods of "myPerson" object
+		myPerson.tellYourage();
+		myPerson.tellSomething("Life is good!");
+		myPerson.tellWhatever("Hello");
+
+		// Create another JavaScript object
+		var myVar = {
+			count : 20,
+			person : myPerson
+		}
+
+		// Display the "myPerson" object
+		console.dir(myVar);
+
+		myVar.person.tellSomething("Life is REALLY REALLY good!");
+
+		// Display global object
+		console.dir(this);
+	</script>
+</body>
+</html>

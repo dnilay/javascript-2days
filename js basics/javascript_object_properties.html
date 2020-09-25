@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title></title>
+</head>
+<body>
+<h3>(Open JavaScript console by pressing F12 key) 
+Shows how to access properties of a JavaScript object.</h3>
+<script type="text/javascript">
+	// Create a JavaScript object 
+	var myPerson = {
+		firstname : "John",
+		lastname : "Doe",
+	}
+
+	myPerson.firstName = "Sang";
+	myPerson["lastName"] = "Shin";
+
+	console.log(myPerson.firstName + " " + myPerson["lastName"]);
+
+	// [] property notation can take variable
+		
+	var txt = "test";
+	myPerson[txt] = "Passion!";
+
+	console.log(myPerson.test); 	// Passion!
+	console.log(myPerson.txt); 		// undefined
+</script>
+</body>
+</html>
